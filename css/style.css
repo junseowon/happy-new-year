@@ -48,9 +48,12 @@ canvas {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 .btn-celebrate {
+    color: #fff;
     background: linear-gradient(45deg, #f59e0b, #d97706);
-    transition: all 0.3s ease;
-    pointer-events: auto;
+    transition: all 0.3s ease;    
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 17px;
 }
 .btn-celebrate:hover {
     cursor: pointer;
