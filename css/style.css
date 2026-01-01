@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #050505;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+}
+
+canvas {
+    display: block;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.year-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(5rem, 15vw, 10rem);
+    background: linear-gradient(to bottom, #fde68a, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.5));
+    animation: pulse 2s infinite ease-in-out;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    pointer-events: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+.btn-celebrate {
+    background: linear-gradient(45deg, #f59e0b, #d97706);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+.btn-celebrate:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+}
